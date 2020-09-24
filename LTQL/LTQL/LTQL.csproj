@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -124,6 +132,42 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009241556357_create_table_KhachHang.cs" />
+    <Compile Include="Migrations\202009241556357_create_table_KhachHang.Designer.cs">
+      <DependentUpon>202009241556357_create_table_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241607268_create_table_HoaDon.cs" />
+    <Compile Include="Migrations\202009241607268_create_table_HoaDon.Designer.cs">
+      <DependentUpon>202009241607268_create_table_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241615569_create_table_HoaDon1.cs" />
+    <Compile Include="Migrations\202009241615569_create_table_HoaDon1.Designer.cs">
+      <DependentUpon>202009241615569_create_table_HoaDon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241632352_create_table_NhanVien.cs" />
+    <Compile Include="Migrations\202009241632352_create_table_NhanVien.Designer.cs">
+      <DependentUpon>202009241632352_create_table_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241640273_create_table_GianHang.cs" />
+    <Compile Include="Migrations\202009241640273_create_table_GianHang.Designer.cs">
+      <DependentUpon>202009241640273_create_table_GianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241646373_create_table_LoaiHangHoa.cs" />
+    <Compile Include="Migrations\202009241646373_create_table_LoaiHangHoa.Designer.cs">
+      <DependentUpon>202009241646373_create_table_LoaiHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241652357_create_table_ChiTietHoaDon.cs" />
+    <Compile Include="Migrations\202009241652357_create_table_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ChiTietHoaDon.cs" />
+    <Compile Include="Models\GianHang.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\LoaiHangHoa.cs" />
+    <Compile Include="Models\LTQLsieuthimini.cs" />
+    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -165,7 +209,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -179,6 +222,29 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202009241556357_create_table_KhachHang.resx">
+      <DependentUpon>202009241556357_create_table_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241607268_create_table_HoaDon.resx">
+      <DependentUpon>202009241607268_create_table_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241615569_create_table_HoaDon1.resx">
+      <DependentUpon>202009241615569_create_table_HoaDon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241632352_create_table_NhanVien.resx">
+      <DependentUpon>202009241632352_create_table_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241640273_create_table_GianHang.resx">
+      <DependentUpon>202009241640273_create_table_GianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241646373_create_table_LoaiHangHoa.resx">
+      <DependentUpon>202009241646373_create_table_LoaiHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241652357_create_table_ChiTietHoaDon.resx">
+      <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
