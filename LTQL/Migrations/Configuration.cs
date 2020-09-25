@@ -5,14 +5,14 @@ namespace LTQL.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LTQL.Models.LTQL>
+    internal sealed class Configuration : DbMigrationsConfiguration<LTQL.Models.LTQLsieuthimini>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(LTQL.Models.LTQL context)
+        protected override void Seed(LTQL.Models.LTQLsieuthimini context)
         {
             //  This method will be called after migrating to the latest version.
 

@@ -132,28 +132,42 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009241748188_Create_table_NhaCC.cs" />
-    <Compile Include="Migrations\202009241748188_Create_table_NhaCC.Designer.cs">
-      <DependentUpon>202009241748188_Create_table_NhaCC.cs</DependentUpon>
+    <Compile Include="Migrations\202009241556357_create_table_KhachHang.cs" />
+    <Compile Include="Migrations\202009241556357_create_table_KhachHang.Designer.cs">
+      <DependentUpon>202009241556357_create_table_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009241755133_Create_table_ChiTietLoaiHang.cs" />
-    <Compile Include="Migrations\202009241755133_Create_table_ChiTietLoaiHang.Designer.cs">
-      <DependentUpon>202009241755133_Create_table_ChiTietLoaiHang.cs</DependentUpon>
+    <Compile Include="Migrations\202009241607268_create_table_HoaDon.cs" />
+    <Compile Include="Migrations\202009241607268_create_table_HoaDon.Designer.cs">
+      <DependentUpon>202009241607268_create_table_HoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009241807229_Create_table_HangHoa.cs" />
-    <Compile Include="Migrations\202009241807229_Create_table_HangHoa.Designer.cs">
-      <DependentUpon>202009241807229_Create_table_HangHoa.cs</DependentUpon>
+    <Compile Include="Migrations\202009241615569_create_table_HoaDon1.cs" />
+    <Compile Include="Migrations\202009241615569_create_table_HoaDon1.Designer.cs">
+      <DependentUpon>202009241615569_create_table_HoaDon1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202009241815345_Create_table_User.cs" />
-    <Compile Include="Migrations\202009241815345_Create_table_User.Designer.cs">
-      <DependentUpon>202009241815345_Create_table_User.cs</DependentUpon>
+    <Compile Include="Migrations\202009241632352_create_table_NhanVien.cs" />
+    <Compile Include="Migrations\202009241632352_create_table_NhanVien.Designer.cs">
+      <DependentUpon>202009241632352_create_table_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241640273_create_table_GianHang.cs" />
+    <Compile Include="Migrations\202009241640273_create_table_GianHang.Designer.cs">
+      <DependentUpon>202009241640273_create_table_GianHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241646373_create_table_LoaiHangHoa.cs" />
+    <Compile Include="Migrations\202009241646373_create_table_LoaiHangHoa.Designer.cs">
+      <DependentUpon>202009241646373_create_table_LoaiHangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009241652357_create_table_ChiTietHoaDon.cs" />
+    <Compile Include="Migrations\202009241652357_create_table_ChiTietHoaDon.Designer.cs">
+      <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\ChiTietLoaiHang.cs" />
-    <Compile Include="Models\HangHoa.cs" />
-    <Compile Include="Models\LTQL.cs" />
-    <Compile Include="Models\NhaCC.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ChiTietHoaDon.cs" />
+    <Compile Include="Models\GianHang.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\LoaiHangHoa.cs" />
+    <Compile Include="Models\LTQLsieuthimini.cs" />
+    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -210,17 +224,26 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202009241748188_Create_table_NhaCC.resx">
-      <DependentUpon>202009241748188_Create_table_NhaCC.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009241556357_create_table_KhachHang.resx">
+      <DependentUpon>202009241556357_create_table_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009241755133_Create_table_ChiTietLoaiHang.resx">
-      <DependentUpon>202009241755133_Create_table_ChiTietLoaiHang.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009241607268_create_table_HoaDon.resx">
+      <DependentUpon>202009241607268_create_table_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009241807229_Create_table_HangHoa.resx">
-      <DependentUpon>202009241807229_Create_table_HangHoa.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009241615569_create_table_HoaDon1.resx">
+      <DependentUpon>202009241615569_create_table_HoaDon1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202009241815345_Create_table_User.resx">
-      <DependentUpon>202009241815345_Create_table_User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202009241632352_create_table_NhanVien.resx">
+      <DependentUpon>202009241632352_create_table_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241640273_create_table_GianHang.resx">
+      <DependentUpon>202009241640273_create_table_GianHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241646373_create_table_LoaiHangHoa.resx">
+      <DependentUpon>202009241646373_create_table_LoaiHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009241652357_create_table_ChiTietHoaDon.resx">
+      <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -239,9 +262,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61354</DevelopmentServerPort>
+          <DevelopmentServerPort>51453</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61354/</IISUrl>
+          <IISUrl>http://localhost:51453/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
