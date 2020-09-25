@@ -160,14 +160,34 @@
     <Compile Include="Migrations\202009241652357_create_table_ChiTietHoaDon.Designer.cs">
       <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009250344119_create_table_ChiTietLoaiHang.cs" />
+    <Compile Include="Migrations\202009250344119_create_table_ChiTietLoaiHang.Designer.cs">
+      <DependentUpon>202009250344119_create_table_ChiTietLoaiHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009250345082_create_table_HangHoa.cs" />
+    <Compile Include="Migrations\202009250345082_create_table_HangHoa.Designer.cs">
+      <DependentUpon>202009250345082_create_table_HangHoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009250345388_create_table_NhaCC.cs" />
+    <Compile Include="Migrations\202009250345388_create_table_NhaCC.Designer.cs">
+      <DependentUpon>202009250345388_create_table_NhaCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009250346062_create_table_User.cs" />
+    <Compile Include="Migrations\202009250346062_create_table_User.Designer.cs">
+      <DependentUpon>202009250346062_create_table_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ChiTietHoaDon.cs" />
+    <Compile Include="Models\ChiTietLoaiHang.cs" />
     <Compile Include="Models\GianHang.cs" />
+    <Compile Include="Models\HangHoa.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiHangHoa.cs" />
     <Compile Include="Models\LTQLsieuthimini.cs" />
+    <Compile Include="Models\NhaCC.cs" />
     <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +264,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009241652357_create_table_ChiTietHoaDon.resx">
       <DependentUpon>202009241652357_create_table_ChiTietHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009250344119_create_table_ChiTietLoaiHang.resx">
+      <DependentUpon>202009250344119_create_table_ChiTietLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009250345082_create_table_HangHoa.resx">
+      <DependentUpon>202009250345082_create_table_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009250345388_create_table_NhaCC.resx">
+      <DependentUpon>202009250345388_create_table_NhaCC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009250346062_create_table_User.resx">
+      <DependentUpon>202009250346062_create_table_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

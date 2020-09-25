@@ -18,6 +18,10 @@ namespace LTQL.Models
         public virtual DbSet<GianHang> GianHangs { get; set; }
         public virtual DbSet<LoaiHangHoa> LoaiHangHoas { get; set; }
         public virtual DbSet<ChiTietHoaDon> ChiTietHoaDons { get; set; }
+        public virtual DbSet<ChiTietLoaiHang> ChiTietLoaiHangs { get; set; }
+        public virtual DbSet<HangHoa> HangHoas { get; set; }
+        public virtual DbSet<NhaCC> NhaCCs { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
 
 
