@@ -16,7 +16,6 @@ namespace LTQL.Models
         [MaxLength(10)]
         public String TenNCC { get; set; }
         public int SoLuong { get; set; }
-        public String DiaChi { get; set; }
 
 
     }
