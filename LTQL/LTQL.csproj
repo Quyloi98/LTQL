@@ -153,6 +153,7 @@
     <Compile Include="Models\HangHoa.cs" />
     <Compile Include="Models\LTQL.cs" />
     <Compile Include="Models\NhaCC.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

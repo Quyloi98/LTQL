@@ -15,6 +15,7 @@ namespace LTQL.Models
         public virtual DbSet<ChiTietLoaiHang> ChiTietLoaiHangs { get; set; }
         public virtual DbSet<HangHoa> HangHoas { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
