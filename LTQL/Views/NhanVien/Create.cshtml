@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Create", "NhanVien"))
+{
+    <div>
+        <label>Mã nhân viên</label>
+        <input type="text" name="MaNv" />
+    </div>
+    <div>
+        <label>Tên nhân viên</label>
+        <input type="text" name="TenNV" />
+    </div>
+    <div>
+        <label>ngày sinh</label>
+        <input type="text" name="NgaySinh" />
+    </div>
+    <div>
+        <label>Quê quán</label>
+        <input type="text" name="QueQuan" />
+    </div>
+    <div>
+        <label>Số điện thoại</label>
+        <input type="text" name="SDT" />
+    </div>
+    <div>
+        <label>Lương</label>
+        <input type="text" name="Luong" />
+    </div>
+    <div>
+        <label>Mã gian hàng</label>
+        <input type="text" name="MaGH" />
+    </div>
+    <div>
+        <label>Giới tính</label>
+        <input type="text" name="GioiTinh" />
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+}
+

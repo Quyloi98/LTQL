@@ -128,8 +128,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ChiTietHoaDonController.cs" />
+    <Compile Include="Controllers\ChiTietLoaiHangController.cs" />
+    <Compile Include="Controllers\GianHangsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
+    <Compile Include="Controllers\NhanVienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,6 +233,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\KhachHang\Index.cshtml" />
     <Content Include="Views\KhachHang\Create.cshtml" />
+    <Content Include="Views\NhanVien\Index.cshtml" />
+    <Content Include="Views\NhanVien\Create.cshtml" />
+    <Content Include="Views\ChiTietHoaDon\Index.cshtml" />
+    <Content Include="Views\ChiTietHoaDon\Create.cshtml" />
+    <Content Include="Views\ChiTietLoaiHang\Index.cshtml" />
+    <Content Include="Views\ChiTietLoaiHang\Create.cshtml" />
+    <Content Include="Views\GianHangs\Index.cshtml" />
+    <Content Include="Views\GianHangs\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

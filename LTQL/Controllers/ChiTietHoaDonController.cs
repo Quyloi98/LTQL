@@ -7,30 +7,29 @@ using System.Web.Mvc;
 
 namespace LTQL.Controllers
 {
-    public class KhachHangController : Controller
+    public class ChiTietHoaDonController : Controller
     {
         LTQLsieuthimini db = new LTQLsieuthimini();
-        // GET: KhachHang
+        // GET: ChiTietHoaDon
         public ActionResult Index()
         {
-            return View(db.KhachHangs.ToList());
+            return View(db.ChiTietHoaDons.ToList());
         }
-        // tra ve mot view cho client nhap thong tin khach hang
         [HttpGet]
         public ActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public ActionResult Create(KhachHang kh)
-        {          
-            if(ModelState.IsValid)
-            {               
-                db.KhachHangs.Add(kh);
+        public ActionResult Create(ChiTietHoaDon cthd)
+        {
+            if (ModelState.IsValid)
+            {
+                db.ChiTietHoaDons.Add(cthd);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-            }            
-           return View();
+            }
+            return View();
         }
     }
 }
