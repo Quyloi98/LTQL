@@ -10,107 +10,107 @@ using LTQL.Models;
 
 namespace LTQL.Controllers
 {
-    public class GianHangsController : Controller
+    public class UsersController : Controller
     {
         private LTQLsieuthimini db = new LTQLsieuthimini();
 
-        // GET: GianHangs
+        // GET: Users
         public ActionResult Index()
         {
-            return View(db.GianHangs.ToList());
+            return View(db.Users.ToList());
         }
 
-        // GET: GianHangs/Details/5
+        // GET: Users/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(user);
         }
 
-        // GET: GianHangs/Create
+        // GET: Users/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: GianHangs/Create
+        // POST: Users/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaGH,TenGH,ViTri,MaNQL")] GianHang gianHang)
+        public ActionResult Create([Bind(Include = "TaiKhoan,MatKhau")] User user)
         {
             if (ModelState.IsValid)
             {
-                db.GianHangs.Add(gianHang);
+                db.Users.Add(user);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(gianHang);
+            return View(user);
         }
 
-        // GET: GianHangs/Edit/5
+        // GET: Users/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(user);
         }
 
-        // POST: GianHangs/Edit/5
+        // POST: Users/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaGH,TenGH,ViTri,MaNQL")] GianHang gianHang)
+        public ActionResult Edit([Bind(Include = "TaiKhoan,MatKhau")] User user)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(gianHang).State = EntityState.Modified;
+                db.Entry(user).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(gianHang);
+            return View(user);
         }
 
-        // GET: GianHangs/Delete/5
+        // GET: Users/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            User user = db.Users.Find(id);
+            if (user == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(user);
         }
 
-        // POST: GianHangs/Delete/5
+        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            GianHang gianHang = db.GianHangs.Find(id);
-            db.GianHangs.Remove(gianHang);
+            User user = db.Users.Find(id);
+            db.Users.Remove(user);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

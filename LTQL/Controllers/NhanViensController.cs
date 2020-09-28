@@ -10,107 +10,107 @@ using LTQL.Models;
 
 namespace LTQL.Controllers
 {
-    public class GianHangsController : Controller
+    public class NhanViensController : Controller
     {
         private LTQLsieuthimini db = new LTQLsieuthimini();
 
-        // GET: GianHangs
+        // GET: NhanViens
         public ActionResult Index()
         {
-            return View(db.GianHangs.ToList());
+            return View(db.NhanViens.ToList());
         }
 
-        // GET: GianHangs/Details/5
+        // GET: NhanViens/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            NhanVien nhanVien = db.NhanViens.Find(id);
+            if (nhanVien == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(nhanVien);
         }
 
-        // GET: GianHangs/Create
+        // GET: NhanViens/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: GianHangs/Create
+        // POST: NhanViens/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaGH,TenGH,ViTri,MaNQL")] GianHang gianHang)
+        public ActionResult Create([Bind(Include = "MaNV,TenNV,NgaySinh,QueQuan,SDT,Luong,MaGH,GioiTinh")] NhanVien nhanVien)
         {
             if (ModelState.IsValid)
             {
-                db.GianHangs.Add(gianHang);
+                db.NhanViens.Add(nhanVien);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(gianHang);
+            return View(nhanVien);
         }
 
-        // GET: GianHangs/Edit/5
+        // GET: NhanViens/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            NhanVien nhanVien = db.NhanViens.Find(id);
+            if (nhanVien == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(nhanVien);
         }
 
-        // POST: GianHangs/Edit/5
+        // POST: NhanViens/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaGH,TenGH,ViTri,MaNQL")] GianHang gianHang)
+        public ActionResult Edit([Bind(Include = "MaNV,TenNV,NgaySinh,QueQuan,SDT,Luong,MaGH,GioiTinh")] NhanVien nhanVien)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(gianHang).State = EntityState.Modified;
+                db.Entry(nhanVien).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(gianHang);
+            return View(nhanVien);
         }
 
-        // GET: GianHangs/Delete/5
+        // GET: NhanViens/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            GianHang gianHang = db.GianHangs.Find(id);
-            if (gianHang == null)
+            NhanVien nhanVien = db.NhanViens.Find(id);
+            if (nhanVien == null)
             {
                 return HttpNotFound();
             }
-            return View(gianHang);
+            return View(nhanVien);
         }
 
-        // POST: GianHangs/Delete/5
+        // POST: NhanViens/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            GianHang gianHang = db.GianHangs.Find(id);
-            db.GianHangs.Remove(gianHang);
+            NhanVien nhanVien = db.NhanViens.Find(id);
+            db.NhanViens.Remove(nhanVien);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

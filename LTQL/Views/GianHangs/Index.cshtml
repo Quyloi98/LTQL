@@ -13,9 +13,6 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.MaGH)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.TenGH)
         </th>
         <th>
@@ -28,25 +25,22 @@
     </tr>
 
 @foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.MaGH)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.TenGH)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ViTri)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.MaNQL)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.MaGH }) |
-        @Html.ActionLink("Details", "Details", new { id = item.MaGH }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.MaGH })
-    </td>
-</tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenGH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNQL)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaGH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaGH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaGH })
+        </td>
+    </tr>
 }
 
 </table>
