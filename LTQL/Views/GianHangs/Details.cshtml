@@ -1,0 +1,43 @@
+﻿@model LTQL.Models.GianHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GianHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenGH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenGH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ViTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViTri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNQL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNQL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaGH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
